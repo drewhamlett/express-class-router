@@ -12,7 +12,7 @@ function log(req, res, next) {
 
 export default class Home {
 
-  beforeAction = [log]
+  static beforeAction = [log]
 
   index(req, res) {
     res.render('home')
