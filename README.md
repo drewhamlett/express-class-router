@@ -4,6 +4,7 @@
 ### Example
 ```js
 
+//home.js
 function log(req, res, next) {
   console.log('hello')
   next()
@@ -16,6 +17,16 @@ export default class Home {
   index(req, res) {
     res.render('home')
   }
+}
+```
+
+```js
+//routes.js
+const router = new Router('./server/controllers')
+router.get('/', 'home#index')
+
+export default {
+  router
 }
 ```
 
